@@ -1,12 +1,17 @@
 <?php
+require_once 'msqli.php';
+
 $dbhost = 'localhost';
 $dbname = 'rsgamer';
 $dbuser = 'root';
 $dbpass = '';
 $appname = "Gamer exigent";
 
-$connection = new msqli($dbhsot,$dbname,$dbuser,$dbpass);
-if ($connection->connect_error) die($connection->connect_error);
+$connection = new msqli($dbhost,$dbname,$dbuser,$dbpass);
+if (!empty($connection->connect_error)) {
+    if ($connection->connect_error) die($connection->connect_error);
+}
+
 
 function createTable($name, $query)
 {	#Crée 1 table
@@ -18,9 +23,9 @@ function createTable($name, $query)
 function queryMysql($query)
 {	#Lancer 1 requete Mysql
 	global $connection;
-	$ result = $connection->query($query);
-	if (!result) die($connection->error);
-	return result;
+	$result = $connection->query($query);
+	if (!$result) die($connection->error);
+	return $result;
 }
 
 function destroySession()

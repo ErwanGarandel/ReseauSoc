@@ -18,14 +18,14 @@
 
 	echo "<title>$appname$userstr</title><link rel='stylesheet' " 	.
 		 "<href ='styles.css' type='text/css'>"						.
-		 "</head><body><center><canvas id='logo' width='638' "		.
-		 "heigth=96>$appname</canvas></center>"						.
+        "</head><body><div style=\"text-align: center;\"><canvas id='logo' width='638' " .
+        "heigth=96>$appname</div></canvas>" .
 		 "<div class='appname'>$appname$userstr</div>"				.
 		 "<script src='javascript.js'></script>";
 
 	if ($loggedin)
 	{	#si identifié
-		echo "<br > <ul class='menu'>"	.
+		echo "<br > <ul class='menu'>"	                                .
 			 "<li><a href='members.php?view=$user'>Accueil</a></li>"	.
 			 "<li><a href='members.php'>Membres</a></li>"				.
 			 "<li><a href='friends.php'>Amis</a></li>"					.
@@ -35,7 +35,7 @@
 	}
 	else
 	{
-		echo ("<br><ul class='menu'>"
+		echo ("<br><ul class='menu'>"                                   .
 			"<li><a href='index.php?'>Accueil</a></li>"					.
 			"<li><a href='signup.php'>S'inscrire /</a></li>"			.
 			"<li><a href='login.php'>Se Connecter</a></li></ul></br>"	.
