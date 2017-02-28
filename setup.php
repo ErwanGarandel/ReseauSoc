@@ -1,3 +1,11 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Erwan
+ * Date: 28/02/2017
+ * Time: 22:52
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +13,9 @@
 </head>
 <body>
 <h3>Préparation :</h3>
-<?php #setutp.php
-/**
- * Created by PhpStorm.
- * User: Erwan
- * Date: 26/02/2017
- * Time: 11:18
- */
+
+<?php
+ #setup.php
 
 require_once 'functions.php';
 
@@ -34,7 +38,7 @@ createTable(
     message VARCHAR(4096),
     INDEX(auth(6)),
     INDEX(recip(6))'
-    );
+);
 
 #Table des amis
 createTable(

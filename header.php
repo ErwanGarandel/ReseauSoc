@@ -40,7 +40,7 @@
 			"<li><a href='signup.php'>S'inscrire /</a></li>"			.
 			"<li><a href='login.php'>Se Connecter</a></li></ul></br>"	.
 			"<span class='info'>&#8658 ; Vous devez être connecté pour"	.
-			"voir cette page.</span><br><br>"
+			" voir cette page.</span><br><br>"
 			);
 	}	 	
 
